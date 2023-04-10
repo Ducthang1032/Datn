@@ -24,6 +24,7 @@ public enum MetaData {
     USERNAME_OR_PASSWORD_INCORRECT(410, "Username or password incorrect"),
     PASSWORD_INVALID(411, "Password invalid"),
     EMAIL_OR_PHONE_INVALID(412, "Email or phone invalid"),
+    INPUT_ENCODING_DATA_INVALID(412, "Input encoding data invalid"),
 
     // Server error responses
     INTERNAL_SERVER_ERROR(500, "Internal Server Error"),
