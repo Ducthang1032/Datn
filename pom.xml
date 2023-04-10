@@ -14,7 +14,7 @@
     <name>datn-be</name>
     <description>datn-be</description>
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -60,6 +60,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-mail</artifactId>
             <version>2.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.libphonenumber</groupId>
+            <artifactId>libphonenumber</artifactId>
+            <version>8.12.45</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.paypal.sdk/rest-api-sdk -->
         <dependency>

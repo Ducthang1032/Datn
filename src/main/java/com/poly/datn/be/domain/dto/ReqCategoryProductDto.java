@@ -1,7 +1,7 @@
 package com.poly.datn.be.domain.dto;
 
 import com.poly.datn.be.entity.Category;
-import com.poly.datn.be.entity.Product;
+import com.poly.datn.be.entity.Car;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,5 +16,5 @@ public class ReqCategoryProductDto {
 
     private Category category;
 
-    private Product product;
+    private Car car;
 }

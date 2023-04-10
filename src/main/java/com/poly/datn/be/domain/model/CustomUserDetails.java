@@ -1,6 +1,6 @@
 package com.poly.datn.be.domain.model;
 
-import com.poly.datn.be.entity.Account;
+import com.poly.datn.be.domain.UserEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
@@ -13,21 +13,21 @@ import java.util.Collection;
 @Data
 @AllArgsConstructor
 public class CustomUserDetails implements UserDetails {
-    private Account account;
+    private UserEntity userEntity;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singleton(new SimpleGrantedAuthority(account.getRole().getName()));
+        return Collections.singleton(new SimpleGrantedAuthority(String.valueOf(userEntity.getRole())));
     }
 
     @Override
     public String getPassword() {
-        return account.getPassword();
+        return userEntity.getPassword();
     }
 
     @Override
     public String getUsername() {
-        return account.getUsername();
+        return userEntity.getEmail();
     }
 
     @Override

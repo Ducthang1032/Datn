@@ -1,6 +1,5 @@
 package com.poly.datn.be.domain.dto;
 
-import com.poly.datn.be.entity.Attribute;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,7 +19,6 @@ public class RespProductDetailDto {
     private String main;
     private Integer discount;
     private List<String> images;
-    private List<Attribute> attributes;
     private List<Long> category;
     private Long saleId;
     private Long brandId;
