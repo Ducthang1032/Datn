@@ -63,6 +63,7 @@ public class AuthenticateController extends BaseController {
             return ResponseEntity.badRequest()
                     .body(new ResponseMetaData(new MetaDTO(MetaData.USERNAME_OR_PASSWORD_INCORRECT)));
 
+        userLogin.setPassword(aesService.decryptDataWithoutUrl(userLogin.getPassword()));
         //generate access token
         LoginResponseDTO loginResponseDTO = authService.generateToken(userLogin, userEntity, false);
         if (Objects.isNull(loginResponseDTO)) {

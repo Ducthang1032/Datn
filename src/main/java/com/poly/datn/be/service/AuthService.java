@@ -20,8 +20,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.time.Instant;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -41,7 +39,6 @@ public class AuthService {
         log.info("Start generate token with username = {}", requestModel.getUsername());
         List<GrantedAuthority> grantedAuthorities = AuthorityUtils
                 .commaSeparatedStringToAuthorityList(AuthoritiesConstants.ROLE_PREFIX.concat(userEntity.getRole()));
-
         UsernamePasswordAuthenticationToken authToken =
                 new UsernamePasswordAuthenticationToken(String.valueOf(userEntity.getId()), requestModel.getPassword(), grantedAuthorities);
 
@@ -75,9 +72,5 @@ public class AuthService {
         log.info("SUCCESS while create new user with userId = {}, email = {}, phone = {}",
                 userEntity.getId(), registerDTO.getEmail(), registerDTO.getPhone());
         return response;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(Instant.now());
     }
 }

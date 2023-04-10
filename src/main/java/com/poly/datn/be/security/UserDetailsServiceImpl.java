@@ -2,7 +2,6 @@ package com.poly.datn.be.security;
 
 import com.poly.datn.be.constants.AuthoritiesConstants;
 import com.poly.datn.be.domain.UserEntity;
-import com.poly.datn.be.enums.RoleAccount;
 import com.poly.datn.be.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -26,10 +25,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
         UserEntity user = userRepository.findById(Long.valueOf(userId)).orElse(null);
-        if (user == null) {
+        if (Objects.isNull(user)) {
             throw new UsernameNotFoundException("User not found with username: " + userId);
         }
-        return new User(user.getName(), user.getPassword(), new ArrayList<>());
+        List<GrantedAuthority> grantedAuthorities = AuthorityUtils
+                .commaSeparatedStringToAuthorityList(AuthoritiesConstants.ROLE_PREFIX.concat(user.getRole()));
+        return new User(String.valueOf(user.getId()), user.getPassword(), grantedAuthorities);
     }
 
 //    @Override
