@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 10, 2023 lúc 02:06 PM
+-- Thời gian đã tạo: Th4 10, 2023 lúc 08:17 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -161,9 +161,9 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`id`, `name`, `email`, `phone`, `address`, `password`, `role`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'hovandai2406@gmail.com', '0359689876', 'Ha Noi', '$2a$10$RAqHTe/MNp.oQVy2kyWETOG1vjUMVFn94DTXyaF2D9s', 'ADMIN', 'active', '2023-04-01 18:17:19', NULL),
-(3, 'XuanAnh', 'xanh@gmail.com', '0366046334', 'Tây Mỗ, Nam Từ Liêm, Hà Nội', '$2a$10$RAqHTe/MNp.oQVy2kyWETOG1vjUMVFn94DTXyaF2D9s', 'ADMIN', 'active', '2023-04-01 18:17:19', NULL),
-(4, 'ducthang1', 'thangnguyen1032000@gmail.com', '0359689876', 'Ha Noi', '$2a$10$RAqHTe/MNp.oQVy2kyWETOG1vjUMVFn94DTXyaF2D9s', 'USER', 'active', '2023-04-01 18:17:19', NULL),
+(1, 'admin', 'hovandai2406@gmail.com', '0359689876', 'Ha Noi', '$2a$12$g1J9UAMjkVZJDa09R0UuFeifOFyPYo4m4oUNQrtm8KqEttJxfeY.2', 'ADMIN', 'active', '2023-04-01 18:17:19', NULL),
+(3, 'XuanAnh', 'xanh@gmail.com', '0366046334', 'Tây Mỗ, Nam Từ Liêm, Hà Nội', '$2a$12$g1J9UAMjkVZJDa09R0UuFeifOFyPYo4m4oUNQrtm8KqEttJxfeY.2', 'ADMIN', 'active', '2023-04-01 18:17:19', NULL),
+(4, 'ducthang1', 'thangnguyen1032000@gmail.com', '0359689876', 'Ha Noi', '$2a$12$g1J9UAMjkVZJDa09R0UuFeifOFyPYo4m4oUNQrtm8KqEttJxfeY.2', 'USER', 'active', '2023-04-01 18:17:19', NULL),
 (5, 'thang2', 'thang1@yopmail.com', '', '', '$2a$10$5MpGJd22kXyhutSStXYmJOJ2CwKRcMP1Xs9PUIKpFezf8Kg1qjNMe', 'USER', 'active', '2023-04-10 18:21:11', NULL);
 
 --
@@ -236,7 +236,7 @@ ALTER TABLE `tbl_category`
 -- AUTO_INCREMENT cho bảng `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

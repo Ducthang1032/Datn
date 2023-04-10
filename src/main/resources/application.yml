@@ -7,7 +7,8 @@ app:
     expiration-token: 900000 # 15 minutes
     ignore-auth-api: /auth/**,/actuator/health
   cipher:
-    encrypt-key: bQeThWmZq4t7w!z%C*F)J@NcRfUjXn2r # key use to encrypt, decrypt
+    encrypt-key: 3t6w9y$B&E)H@McQfTjWnZr4u7x!A%C*
+     # key use to encrypt, decrypt
 
 spring:
   datasource:
